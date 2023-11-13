@@ -38,5 +38,6 @@ server.on("connection", (socket) => {
   // When a client disconnects, remove it from the clients map
   socket.on("close", () => {
     console.log(`Client ${id} disconnected.`);
+    clients.delete(socket);
   });
 });
